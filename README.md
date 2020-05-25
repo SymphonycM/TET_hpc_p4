@@ -18,15 +18,18 @@ https://drive.google.com/drive/folders/1fPnGNXCHQuAwJbQuef1IljKWcZdHSfWS?usp=sha
 <0.ideas preliminares de proyecto4>
 
 Problema
+
 El procesamiento de cadenas de ADN hace parte del intenso día a día de la investigación científica en las áreas de medicina y biología, por eso es importante que la velocidad en la que los algoritmos utilizados para procesarlas exitosamente.
 Uno de estos procesos que se hacen sobre éstas es encontrar una Matriz de Perfil y una Cadena de Consenso a partir de determinadas cadenas.
 
 Con el fin de lograr reducir significativamente estos tiempos, se debe crear un algoritmo de alto rendimiento que haga uso de paralelización para resolver este proceso exitosamente en el menor tiempo posible
 
 Enunciado
+
 Dada una colección de como máximo 10 cadenas de ADN de igual longitud (como máximo 1 kbp) en formato FASTA, se debe devolver una cadena de consenso y una matriz de perfil para la colección. (Si existen varias posibles cadenas de consenso, puede devolver cualquiera de ellas).
 
 Base teórica
+
 Una matriz es una tabla rectangular de valores dividida en filas y columnas. Una matriz m × n tiene m filas y n columnas. Dada una matriz A, escribimos Ai, j para indicar el valor encontrado en la intersección de la fila i y la columna j.
 
 Digamos que tenemos una colección de cadenas de ADN, todas con la misma longitud n. Su matriz de perfil es una matriz P 4 × n en la cual P1, j representa el número de veces que 'A' ocurre en la posición j de una de las cadenas, P2, j representa el número de veces que C ocurre en la posición j , y así sucesivamente.
@@ -34,17 +37,21 @@ Digamos que tenemos una colección de cadenas de ADN, todas con la misma longitu
 Una cadena de consenso c es una cadena de longitud n formada a partir de nuestra colección tomando el símbolo más común en cada posición; el símbolo j de c corresponde, por lo tanto, al símbolo que tiene el valor máximo en la columna j-ésima de la matriz de perfil. Por supuesto, puede haber más de un símbolo más común, lo que lleva a múltiples posibles cadenas de consenso.
 
 Objetivo y alcance
+
 El principal objetivo de este reto es reducir significativamente el tiempo del proceso sobre las cadenas de ADN en el que se busca una matriz perfil y una cadena de consenso a partir de determinadas cadenas.
 Esto con el fin de apoyar la investigación científica en las áreas de medicina y biología
 
 Requerimientos técnicos
+
 Se requiere un procesador con el kit de instrucciones y la capacidad de computación que le permitan ejecutar algoritmos de alto rendimiento de forma paralela 
 
 Plan de trabajo
+
 Diseño de la solución - Entre el 24 y el 30 de Mayo de 2020
 Implementación y testing de la solución - Entre el 5 y 6 de Junio de 2020
 
 Referencias
+
 Éste problema fue seleccionado de:
 http://rosalind.info/problems/cons/
 
