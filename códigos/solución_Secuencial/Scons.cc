@@ -134,5 +134,7 @@ int main(){
 
   double t1 = omp_get_wtime();
 
+cout << "Código serial ejecutado en Xeon phi" << endl;
+
 cout << "Time: " << t1-t0 << endl;
 }

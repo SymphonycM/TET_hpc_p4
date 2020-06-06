@@ -148,6 +148,9 @@ int main(int argc, char *argv[]){
 MPI_Finalize();
 
   double t1 = omp_get_wtime();
+
+cout << "Código paralelo ejecutado en Xeon Phi" << endl;
+
 cout << "Time: " << t1-t0 << endl;
 
 cout << "comm size: " << size << endl;

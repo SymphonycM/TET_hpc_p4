@@ -20,7 +20,15 @@
 #### 3.1 Descripción del algoritmo
 #### 3.2 Pseudocódigo
 #### 3.3 Guía de Compilación
+Para compilar nuestra solución del algoritmo en serial necesitamos correr el siguiente comando en la carpeta que contiene la solución en serial 'solución_Serial'.
+```
+icpc Scons.cc -qopenmp
+```
 #### 3.4 Guía de Ejecución
+Para ejecutar nuestra solución del algoritmo en serial dentro del clúster de Colfax (El clúster del curso de Fundamentals of Parallelism on Intel Architecture) ejecutamos la siguiente linea de código.
+```
+echo 'cd cons/serial; .a.out' | qsub
+```
 #### 3.5 Resultados
 
 ### 4. Algoritmo Paralelo (OpenMP/MPI)
@@ -34,6 +42,6 @@ mpiicpc Pcons.cc -qopenmp
 #### 4.4 Guía de Ejecución
 Para ejecutar nuestra solución del algoritmo en paralelo dentro del clúster de Colfax (El clúster del curso de Fundamentals of Parallelism on Intel Architecture) ejecutamos la siguiente linea de código.
 ```
-echo 'cd cons/parallel; mpirun -host localhost -np 2 numactl --membind 1 ./parallel' | qsub
+echo 'cd cons/parallel; numactl --membind 1 mpirun -host localhost -np 2 ./a.out' | qsub
 ```
 #### 4.5 Resultados
