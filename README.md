@@ -17,7 +17,7 @@
 [Carpeta en Google Drive con la propuesta del proyecto 4](https://drive.google.com/drive/folders/1fPnGNXCHQuAwJbQuef1IljKWcZdHSfWS?usp=sharing)
 
 ### 2. Enlace al video
-[Videosustentación](https://web.microsoftstream.com/video/ef8be5e5-dad7-4b0d-936c-27caf7ffbf71)
+[Videosustentación](https://)
 
 ### 2. Descripción del problema
 El procesamiento de cadenas de ADN hace parte del intenso día a día de la investigación científica en las áreas de medicina y biología, por esto, es muy importante contar con una alta eficiencia en el tiempo que los algoritmos se toman para procesar exitosamente estas tareas.
@@ -127,6 +127,15 @@ El cálculo del Speed Up de la aplicación se realiza dividiendo el tiempo de la
 
 > ts/tp = SpeedUp
 > 0.198786s/0.0421316s = 4.7182162
+
+Vale la pena aclarar en este proyecto que no hicimos uso de la ejecución alojando el programa y su memoria en el apartado de memoria de banda ancha del procesador Xeon Phi. En ese caso, se puede obtener un speed up de casi el dobre, teniendo un promedio de ejecución de cada proceso en paralelo de 0.0019... segundos.
+Para ejecutar el códio paralelizado en este modo, es suficiente con cambiar el comando de ejecución
+`make queue`
+Por el comando
+`echo 'cd SNA/parallel; numactl --membind 1 mpirun -host localhost ./parallel dataset2.txt' | qsub -l nodes=4:flat`
+
+Ejecutando el código de esta forma, observamos la seguiente salida:
+![](https://i.imgur.com/8zdBEkv.jpg)
 
 ### Referencias
 
